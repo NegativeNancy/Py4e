@@ -12,7 +12,6 @@ sorted_list = []
 
 for line in fhand:
     words = line.split()
-    print('Debug:', words)
     for word in words:
         if word in sorted_list: continue
         sorted_list.append(word)
