@@ -7,7 +7,6 @@
 # resulting words in alphabetical order.
 
 fhand = open('romeo.txt')
-count = 0
 sorted_list = []
 
 for line in fhand:
