@@ -26,6 +26,7 @@ except:
 
 count = 0 
 total = 0
+text = None
 while True:
     data = mysock.recv(512)
     total = total + len(data)
@@ -33,13 +34,15 @@ while True:
         break
     for word in data.decode():
         if count < 3000:
-            print(word)
+            # print(word)
             count += 1
         else:
             break
-    # print(data.decode()[:3000])
+    text = data.decode()
 
+print(text[:3000])
 print('Total characters in file: ', total)
+
 
 mysock.close()
 
